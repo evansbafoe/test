@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ION-TECH-AUTOMATION - Product Listing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ION-TECH-AUTOMATION WEBPAGE</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('products')">Products</a></li>
+        <li><a href="#" onclick="showPage('about')">About</a></li>
+        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        <li><a href="#" onclick="showPage('cart')">Cart (<span id="cartCount">0</span>)</a></li>
+      </ul>
+      <div>
+        <button id="backButton" onclick="navigate(-1)" disabled>Back</button>
+        <button id="forwardButton" onclick="navigate(1)" disabled>Forward</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="home" class="page active">
+      <h1>Welcome to Our Online Business</h1>
+      <p>This is the home page.</p>
+    </div>
+
+    <div id="products" class="page">
+      <h1>Our Products</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+        <button id="searchButton" onclick="searchProducts()">Search</button>
+      </div>
+      <div class="product-list" id="productList">
+        <div class="product-card">
+          <img <img <img src="https://i.ibb.co/WKYLMJ2/download.webp" alt="Arduino">
+          <h2>Arduino</h2>
+          <p class="price">GH24.99</p>
+          <button class="add-to-cart" onclick="addToCart('Arduino', 24.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.ibb.co/HtqgknH/download-1.webp" alt="GSM">
+          <h2>GSM</h2>
+          <p class="price">GH30.99</p>
+          <button class="add-to-cart" onclick="addToCart('GSM', 19.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.ibb.co/FwYxCq8/download.jpg" alt="ESP32">
+          <h2>ESP32</h2>
+          <p class="price">GH 14.99</p>
+          <button class="add-to-cart" onclick="addToCart('ESP32', 14.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.ibb.co/sVMJdJd/1-1.jpg" alt="DC Motor">
+          <h2>DC Motor</h2>
+          <p class="price">GH 9.99</p>
+          <button class="add-to-cart" onclick="addToCart('DC Motor', 9.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.ibb.co/Lgq6J22/61mko-Di1vl-L-AC-UF1000-1000-QL80-FMwebp.webp" alt="Stepper Motor">
+          <h2>Stepper Motor</h2>
+          <p class="price">GH 15.99</p>
+          <button class="add-to-cart" onclick="addToCart('Stepper Motor', 15.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.ibb.co/HqG2HfM/download-1.jpg" alt="GSM 800L">
+          <h2>GSM 800L</h2>
+          <p class="price">GH 25.99</p>
+          <button class="add-to-cart" onclick="addToCart('GSM 800L', 25.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.ibb.co/Gxb3X60/5.jpg" alt="4 Way Relay">
+          <h2>4 Way Relay</h2>
+          <p class="price">GH 12.99</p>
+          <button class="add-to-cart" onclick="addToCart('4 Way Relay', 12.99)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cart" class="page">
+      <h1>Cart</h1>
+      <ul id="cartList"></ul>
+      <p>Total: GH <span id="totalAmount">0.00</span></p>
+    </div>
+
+    <div id="about" class="page">
+      <h1>About Us</h1>
+      <p>This is the about page.</p>
+    </div>
+
+    <div id="contact" class="page">
+      <h1>Contact Us</h1>
+      <p>This is the contact page.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Online Business. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
